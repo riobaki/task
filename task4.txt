@@ -1,0 +1,15 @@
+1/: an open loop will give a command based on only the reference lie a blind man Walking so we kcan say it dont have sensors while the close loop will take in consideration the return or the result of that command t the read from the sensors to be specify to compare it with the reference to minimize this difference to get to the reference 
+2/: pid is actually a controler, and a controler is any block or an equation that turn the refrence and the return to a command to the system
+3/: intoduice a big kd so the system is over dumbed or a small kp,to invitigate first try pid only with kp to verigy the gain the add kd to it effect
+4/: the system became unstable because kd is too high and it amplify noice too or maybe the sampling time of the derivate is too big for solution we can redefine kp and kd so the system became stable and verify the sampling time and filtre the d term 
+5/: limit the sum of erreur for ki to avoid big over shoot in this case or limit the max speed of the motor 
+6/: simple timing too big s the integral effect is slow and maybe unstable or kp or ki small ,so we make kp and ki bigger and verify the sampling time
+kp is too big and kd in this case make the satiation worse because of the big change  so as solution for this situation we use setpoint ramp to make kd reaction less agressive 
+7/: serch for noice source and intoduice a filter in both hard and soft and avoid kd because it amplify the noise because more noise cant always be solved with filter because it introduce delays
+8/: use microsteping so we give the motor a sum of micro steps insted of one small step
+9/: investigate the courent from the driver or big mecanique load than the motor load, as solution we can add current to the motor or modify load or add engrenage
+10/: bumb need big power and miro controller cant afford that 
+separate the control low power of microcontroller from the high power the alimente the bumb (12v to bumb from the 3,3v of the mcu) so it act like a switch
+pmw with ssr instead of a normal relay ,or many modes of opiratins depend on power
+11/: introduce a maniacal stress or heating problem or even stop
+to find safe range we should check the datasheet and expriment on the servo the determine the mine and max range of pulse that give us acceptable and safe performance 
